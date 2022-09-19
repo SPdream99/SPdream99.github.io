@@ -1,3 +1,14 @@
+function run(){
+	        const queryString = window.location.search;
+	        const urlParams = new URLSearchParams(queryString);
+	        let templink=document.getElementById('link');
+	        console.log(urlParams.get('llink'));
+	        templink.value=urlParams.get('llink');
+              if(document.getElementById('link').value!=""){
+                post();
+            }
+            }
+            run();
 function gety(surl) {
 	let req = new XMLHttpRequest();
     
