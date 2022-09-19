@@ -62,8 +62,6 @@ var delayInMilliseconds = 2000;
 const buttonx = document.getElementById("buttonx");
 buttonx.addEventListener("click", post);
 function post() {
-    if (urlParams.has('llink')) {
-    }
     let surlp = document.getElementById("link").value;
     let pattern = /https?:\/\/(www\.)?listenbox.app\/[fvi]\/*/;
     if (surlp.match(pattern)) {
