@@ -4,11 +4,11 @@ function run(){
 	        let templink=document.getElementById('link');
 	        console.log(urlParams.get('llink'));
 	        templink.value=urlParams.get('llink');
-              if(document.getElementById('link').value!=""){
+            }
+run();
+if(document.getElementById('link').value!=""){
                 post();
-            }
-            }
-            run();
+              }
 function gety(surl) {
 	let req = new XMLHttpRequest();
     
