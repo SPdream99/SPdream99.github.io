@@ -1,4 +1,3 @@
-Beautify…
 function gety(surl) {
     let req = new XMLHttpRequest();
     req.onreadystatechange = () => {
