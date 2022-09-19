@@ -30,6 +30,19 @@
         </div>
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
+        <script>
+            function run(){
+	        const queryString = window.location.search;
+	        const urlParams = new URLSearchParams(queryString);
+	        let templink=document.getElementById('link');
+	        console.log(urlParams.get('llink'));
+	        templink.value=urlParams.get('llink');
+            }
+            run();
+            if(document.getElementById('link').value!=""){
+                post();
+            }
+        </script>
     </body>
 
 </html>
