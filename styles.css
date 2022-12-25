@@ -23,7 +23,7 @@ img,#imagea{
     padding-top: 1%;
 }
 #titlex{padding-top: 1%;}
-nav ul{height:240px; width:61vw;margin-left: auto;margin-right: auto; text-align: left;}
+nav ul{height:240px;margin-left: auto;margin-right: auto; text-align: left;width:50vw;}
 nav ul{overflow:hidden; overflow-y:scroll;}
 #songlist p{
     max-width: 60vw;
@@ -50,4 +50,9 @@ nav ul{overflow:hidden; overflow-y:scroll;}
    font-weight: bold;
    overflow: auto;
   white-space: break-spaces;
+}
+.main{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
 }
