@@ -117,13 +117,11 @@ function musicControl(state = false, btn = 0) {
                 $(".container.north")[0].classList.remove("active");
                 load_screen[0].classList.add("active");
                 document.body.scrollTop=100;
-                window.scroll(0,1);
             } else {
                 $(".caution").fadeOut();
                 load_screen.fadeOut();
                 $(".container.north")[0].classList.add("active");
                 load_screen[0].classList.remove("active");
-                window.scroll(0,1);
             }
         });
     }
