@@ -1,5 +1,14 @@
+html,
 body {
-    background-color: rgb(252, 111, 3);
+    --bg-color: #222;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 100%, #222, rgba(0, 0, 0, .95) 40%),
+        var(--bg-color);
+    margin: 0;
+    image-rendering: pixelated;
 }
 
 .main {
@@ -15,18 +24,96 @@ body {
     background-color: rgb(207, 25, 25);
 }
 
+.paper {
+    position: absolute;
+    width: 19.6%;
+    height: 67%;
+    background-image: url("./paper.png");
+    background-position: center;
+    background-size: cover;
+    display: none;
+    z-index: -1;
+    top: 4.5%;
+}
+
+.envelope.active~.paper {
+    display: block;
+    box-shadow: rgba(255, 0, 0, 0.642) 5px 9px 17px;
+    animation: get 2s linear forwards;
+    -webkit-animation: get 2s linear forwards;
+}
+
+.paper .wish {
+    color: white;
+    font-size: 2.3vw;
+    writing-mode: vertical-lr;
+    padding-top: 5%;
+    line-height: 2.8vw;
+    letter-spacing: -0.3vw;
+    font-family: "Times New Roman", Times, serif;
+    text-orientation: upright;
+    position: absolute;
+    padding-left: 30%;
+    -webkit-text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
 .envelope .head {
     width: 0;
     height: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-top: 160px solid #F00;
+    border-left: 9.8vw solid transparent;
+    border-right: 9.8vw solid transparent;
+    border-top: 10vw solid #F00;
 }
 
-.envelope .body {
-    height: 60%;
+.envelope .text {
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+    user-select: none;
 }
 
-.envelope .footer {
-    height: 10%;
+.envelope:hover .head {
+    border-top: 8vw solid #F00;
+}
+
+.envelope.active .head {
+    animation: reveal 0.2s linear forwards;
+    -webkit-animation: reveal 0.2s linear forwards;
+}
+
+.envelope.active .text,
+.envelope:hover .text {
+    display: none;
+}
+
+@keyframes reveal {
+    to {
+        border-top: 0vw solid #F00;
+    }
+}
+
+@keyframes get {
+    20% {
+        top: -80%;
+    }
+
+    100% {
+        z-index: 1;
+        top: 6%;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff700, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fffb00, 0 0 40px #ff0000, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
 }
