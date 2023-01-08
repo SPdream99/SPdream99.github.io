@@ -40,7 +40,7 @@ body::after {
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: url(./images/nav-1.png) url(./images/nav-2.png) url(./images/nav-3.png) url(./images/north-bg.jpg) url(./images/middle-bg.jpg) url(./images/south-bg.jpeg) url(./images/music-btn.png) url(./images/up-hover.gif);
+    content: url(./images/Content-frame.png,./images/nav-1.png) url(./images/nav-2.png) url(./images/nav-3.png) url(./images/north-bg.jpg) url(./images/middle-bg.jpg) url(./images/south-bg.jpeg) url(./images/music-btn.png) url(./images/up-hover.gif);
 }
 
 /* Tag */
