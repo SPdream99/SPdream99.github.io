@@ -265,16 +265,16 @@ button:hover {
     height: 10vh;
     top: 0;
     left: 0;
-}
-
-.nav-item {
-    display: inline-block;
-    height: 100%;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.nav-item {
+    display: inline-block;
+    height: 100%;
 }
 
 #navigator .music-btn {
