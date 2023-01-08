@@ -21,6 +21,11 @@ $(document).ready(function () {
     document.getElementsByClassName("music-btn")[0].addEventListener("click", () => {
         musicControlButton();
     });
+    $('html, body').animate({
+        scrollTop: $("#top").offset().top
+    }, 1, function () {
+        window.location.hash = "#top";
+    });
 });
 window.onscroll = function () {
     scrollFunction("go-to-top", 300)
