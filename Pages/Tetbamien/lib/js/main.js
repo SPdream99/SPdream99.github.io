@@ -21,11 +21,6 @@ $(document).ready(function () {
     document.getElementsByClassName("music-btn")[0].addEventListener("click", () => {
         musicControlButton();
     });
-    $('html, body').animate({
-        scrollTop: $("#top").offset().top
-    }, 1, function () {
-        window.location.hash = "#top";
-    });
 });
 window.onscroll = function () {
     scrollFunction("go-to-top", 300)
@@ -49,7 +44,7 @@ function scrolling(select, link, base = true, child, num = 0, ...change) {
         if (link != null) {
             var elementVisible = link;
         } else {
-            var elementVisible = elements[i].offsetHeight * 0.6;
+            var elementVisible = elements[i].offsetHeight * 0.7;
         }
         if (base != false) {
             if (elementTop < windowHeight - elementVisible) {
@@ -97,6 +92,7 @@ function musicControl(state = false, btn = 0) {
         $(".prompt").fadeOut();
         load_screen.fadeOut();
         load_screen[0].classList.remove("active");
+        $(".container.north")[0].classList.add("active");
     }
     button = document.getElementsByClassName("music-btn")[0];
     if (state == true) {

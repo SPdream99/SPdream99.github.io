@@ -149,14 +149,16 @@ button:hover {
 #content-container {
     height: auto;
     background-color: transparent;
+    scroll-snap-type: y mandatory;
 }
 
 .container {
-    height: 105vh;
+    height: 107vh;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    scroll-snap-align: start;
 }
 
 .container.north {
@@ -179,8 +181,8 @@ button:hover {
 }
 
 .block .content {
-    width: 90vh;
-    height: 90vh;
+    width: 40vw;
+    height: 40vw;
     padding-top: 25%;
     background-image: url("./images/Content-frame.png");
     background-repeat: no-repeat;
@@ -327,79 +329,3 @@ button:hover {
 #go-to-top:hover {
     background-image: url("./images/up-hover.gif");
 }
-
-/* Screen sized */
-/*
-@media screen and (min-width: 768px) {
-    .swiper-slide {
-        &::after {
-            right: -30%;
-            bottom: -8%;
-            width: 240px;
-            height: 50%;
-            box-shadow: -230px 0 150px 50vw rgba($black, .7);
-        }
-
-        &-content {
-            right: 30%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 310px;
-            font-size: 11px;
-            text-align: right;
-        }
-
-        .timeline-year {
-            margin-bottom: 0;
-            font-size: 32px;
-        }
-
-        .timeline-title {
-            font-size: 46px;
-            margin: 0;
-        }
-    }
-
-    .swiper-pagination {
-        display: flex;
-    }
-
-    .swiper-button-prev {
-        top: 15%;
-        left: auto;
-        right: 15%;
-        transform: rotate(90deg) translate(0, 10px);
-
-        &:hover {
-            transform: rotate(90deg) translate(-3px, 10px);
-        }
-    }
-
-    .swiper-button-next {
-        top: auto;
-        bottom: 15%;
-        right: 15%;
-        transform: rotate(90deg) translate(0, 10px);
-
-        &:hover {
-            transform: rotate(90deg) translate(3px, 10px);
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .swiper-slide {
-        &::after {
-            right: -20%;
-            bottom: -12%;
-            width: 240px;
-            height: 50%;
-            box-shadow: -230px 0 150px 39vw rgba($black, .7);
-        }
-
-        &-content {
-            right: 25%;
-        }
-    }
-}
-*/

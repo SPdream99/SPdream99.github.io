@@ -21,7 +21,7 @@
 
 @keyframes step {
   to {
-    padding-top: 0;
+    padding-top: 5%;
   }
 }
 
@@ -45,23 +45,28 @@
 
 .container.inactive {
   opacity: 0;
-  animation: unrevealed 0.5s linear forwards;
-  -webkit-animation: unrevealed 0.5s linear forwards;
+  animation: unrevealed 0.9s linear forwards;
+  -webkit-animation: unrevealed 0.9s linear forwards;
 }
 
-.container.active:has(~ .container.active) .block {
-  animation: unrevealed 0.3s linear forwards;
-  -webkit-animation: unrevealed 0.3s linear forwards;
+.container.active:has(~ .container.active) {
+  animation: unrevealed 0.2s linear forwards;
+  -webkit-animation: unrevealed 0.2s linear forwards;
 }
+.container.active:has(~ .container.active) .block {
+  animation: unrevealed 0.1s linear forwards;
+  -webkit-animation: unrevealed 0.1s linear forwards;
+}
+
 
 .container.active {
-  animation: reveal 1s linear forwards;
-  -webkit-animation: reveal 1s linear forwards;
+  animation: reveal 0.9s linear forwards;
+  -webkit-animation: reveal 0.9s linear forwards;
 }
 
-.container.active .heading{
-  animation: step 1s linear forwards;
-  -webkit-animation: step 1s linear forwards;
+.container.active .content{
+  animation: step 0.9s linear forwards;
+  -webkit-animation: step 0.9s linear forwards;
 }
 
 #credit.active {
