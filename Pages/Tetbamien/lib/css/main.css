@@ -229,7 +229,6 @@ button:hover {
 .paragraph {
     height: fit-content;
     overflow-y: hidden;
-    height: 100%;
     overflow-wrap: break-word;
     width: 87%;
     text-align: justify;
