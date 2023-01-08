@@ -66,6 +66,10 @@ h1 {
     font-size: 2vw;
 }
 
+h3 {
+    font-size: 1.3vw;
+}
+
 p {
     font-size: 1vw;
 }
@@ -124,6 +128,10 @@ button:hover {
     display: none;
 }
 
+#loading-container .caution {
+    display: none;
+}
+
 #loading-container.active~#content-container,
 #loading-container.active~#sp-container {
     display: none;
@@ -137,6 +145,22 @@ button:hover {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+#loading-container.active .caution {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 10%;
+}
+#loading-container.active .caution p{
+    font-size: 7vw;
+}
+#loading-container.active .caution img{
+    width: 100%;
 }
 
 #loading-container .buttons {
@@ -182,7 +206,7 @@ button:hover {
     position: relative;
     margin-left: 50%;
     margin-right: 10%;
-    top: 7%;
+    top: 12%;
 }
 
 .block .content {
@@ -333,4 +357,10 @@ button:hover {
 
 #go-to-top:hover {
     background-image: url("./images/up-hover.gif");
+}
+
+@media all and (orientation:portrait) {
+    .caution {
+        display: block;
+    }
 }

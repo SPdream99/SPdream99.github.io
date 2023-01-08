@@ -2,7 +2,12 @@
 $(document).ready(function () {
     setTimeout(function () {
         $(".preloader").fadeOut(function () {
-            $(".prompt").fadeIn();
+            if (screen.availHeight > screen.availWidth) {
+                $(".caution").fadeIn();
+            } else {
+                $(".prompt").fadeIn();
+            }
+            window.addEventListener("resize", rotateCaution);
         });
     }, 2000);
 
@@ -77,6 +82,17 @@ function scrolling(select, link, base = true, child, num = 0, ...change) {
     }
 }
 
+function rotateCaution() {
+    load_screen = $("#loading-container");
+    if (screen.availHeight > screen.availWidth) {
+        $(".prompt").fadeOut();
+        $(".caution").fadeIn();
+    } else {
+        $(".prompt").fadeIn();
+        $(".caution").fadeOut();
+    }
+}
+
 function scrollFunction(Id, height) {
     let btn = document.getElementById(Id);
     if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
@@ -88,11 +104,23 @@ function scrollFunction(Id, height) {
 
 function musicControl(state = false, btn = 0) {
     if (btn == 0) {
+        window.removeEventListener("resize", rotateCaution);
         load_screen = $("#loading-container");
         $(".prompt").fadeOut();
         load_screen.fadeOut();
         load_screen[0].classList.remove("active");
         $(".container.north")[0].classList.add("active");
+        window.addEventListener("resize", () => {
+            if (screen.availHeight > screen.availWidth) {
+                $(".caution").fadeIn();
+                load_screen.fadeIn();
+                load_screen[0].classList.add("active");
+            } else {
+                $(".caution").fadeOut();
+                load_screen.fadeOut();
+                load_screen[0].classList.remove("active");
+            }
+        });
     }
     button = document.getElementsByClassName("music-btn")[0];
     if (state == true) {
