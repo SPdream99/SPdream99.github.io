@@ -44,7 +44,7 @@ function scrolling(select, link, base = true, child, num = 0, ...change) {
         if (link != null) {
             var elementVisible = link;
         } else {
-            var elementVisible = elements[i].offsetHeight * 0.7;
+            var elementVisible = elements[i].offsetHeight * 0.6;
         }
         if (base != false) {
             if (elementTop < windowHeight - elementVisible) {

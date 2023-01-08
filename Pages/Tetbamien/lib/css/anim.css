@@ -59,7 +59,7 @@
   -webkit-animation: reveal 1s linear forwards;
 }
 
-.container.active .heading {
+.container.active .heading{
   animation: step 1s linear forwards;
   -webkit-animation: step 1s linear forwards;
 }
