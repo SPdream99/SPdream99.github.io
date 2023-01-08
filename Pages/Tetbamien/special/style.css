@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(252, 111, 3);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.envelope {
+    width: 300px;
+    height: 500px;
+    background-color: rgb(207, 25, 25);
+}
+
+.envelope .head {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 160px solid #F00;
+}
+
+.envelope .body {
+    height: 60%;
+}
+
+.envelope .footer {
+    height: 10%;
+}
