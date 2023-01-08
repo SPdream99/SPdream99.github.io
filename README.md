@@ -1,5 +1,5 @@
 # Website
-I use this git to update my web projects
+I use this git to update my projects
 
 ## My Projects
 ### [Youtube alexa](https://spdream99.github.io/Pages/Youtube%20Alexa/)
