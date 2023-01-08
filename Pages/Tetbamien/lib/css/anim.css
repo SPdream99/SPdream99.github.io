@@ -1,0 +1,81 @@
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes unrevealed {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes step {
+  to {
+    padding-top: 0;
+  }
+}
+
+@keyframes flip {
+
+  0%,
+  80% {
+    transform: rotateY(360deg)
+  }
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+
+.container.inactive {
+  opacity: 0;
+  animation: unrevealed 0.5s linear forwards;
+  -webkit-animation: unrevealed 0.5s linear forwards;
+}
+
+.container.active:has(~ .container.active) .block {
+  animation: unrevealed 0.3s linear forwards;
+  -webkit-animation: unrevealed 0.3s linear forwards;
+}
+
+.container.active {
+  animation: reveal 1s linear forwards;
+  -webkit-animation: reveal 1s linear forwards;
+}
+
+.container.active .heading {
+  animation: step 1s linear forwards;
+  -webkit-animation: step 1s linear forwards;
+}
+
+#credit.active {
+  display: none;
+}
+
+#progress-bar.north {
+  background-image: url("./images/nav-1.png");
+}
+
+#progress-bar.middle {
+  background-image: url("./images/nav-2.png");
+}
+
+#progress-bar.south {
+  background-image: url("./images/nav-3.png");
+}
