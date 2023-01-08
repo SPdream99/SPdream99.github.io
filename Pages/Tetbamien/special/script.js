@@ -1,16 +1,18 @@
 $(document).ready(function () {
     if (screen.availHeight > screen.availWidth) {
         $(".envelope")[0].style.height = "18.5%";
-        $(".envelope")[0].style.transform = "scale(2)";
+        $(".envelope")[0].style.transform = "scale(1.9)";
         $(".paper")[0].style.height = "19.5%";
-        $(".paper")[0].style.transform = "scale(2)";
+        $(".paper")[0].style.transform = "scale(1.9)";
+        document.documentElement.style.setProperty('--locate','36%');
     } else {
         $(".envelope")[0].style.height = "77%";
         $(".envelope")[0].style.transform = "scale(1)";
         $(".paper")[0].style.height = "77%";
         $(".paper")[0].style.transform = "scale(1)";
+        document.documentElement.style.setProperty('--locate','6%');
     }
-    const wish = ["Chúc Tết đến trăm điều như ý", "Mừng xuân sang vạn sự thành công", "May mắn ngập tràn cả năm", "Cố gắng gấp đôi", "Gia đình hạnh phúc", "Niềm vui tràn trề", "Nỗ lực sẽ thành công"];
+    const wish = ["Chúc Tết đến trăm điều như ý", "Mừng xuân sang vạn sự thành công", "May mắn ngập tràn cả năm", "Cố gắng gấp đôi niềm tin vững chắc", "Gia đình hạnh phúc ấm vui rộn ràng", "Niềm vui tràn trề tiếng cười", "Nỗ lực sẽ thành công"];
     const random = Math.floor(Math.random() * wish.length);
     document.getElementsByClassName("wish")[0].innerHTML = wish[random];
     window.addEventListener("resize", rotateCaution);
@@ -24,14 +26,16 @@ $(document).ready(function () {
 function rotateCaution() {
     if (screen.availHeight > screen.availWidth) {
         $(".envelope")[0].style.height = "18.5%";
-        $(".envelope")[0].style.transform = "scale(2)";
+        $(".envelope")[0].style.transform = "scale(1.9)";
         $(".paper")[0].style.height = "19.5%";
-        $(".paper")[0].style.transform = "scale(2)";
+        $(".paper")[0].style.transform = "scale(1.9)";
+        document.documentElement.style.setProperty('--locate','36%');
     } else {
         $(".envelope")[0].style.height = "77%";
         $(".envelope")[0].style.transform = "scale(1)";
         $(".paper")[0].style.height = "77%";
         $(".paper")[0].style.transform = "scale(1)";
+        document.documentElement.style.setProperty('--locate','6%');
     }
 }
 
@@ -72,8 +76,8 @@ function createFirework(e) {
         f.ontransitionend = function () {
             var p = this.querySelectorAll('.particle')
             p.forEach(function (elm) {
-                var x = Math.random() < .5 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
-                var y = Math.random() < .5 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
+                var x = Math.random() < .2 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
+                var y = Math.random() < .2 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
                 elm.style.left = x + 'px'
                 elm.style.top = y + 'px'
                 elm.style.opacity = '0'

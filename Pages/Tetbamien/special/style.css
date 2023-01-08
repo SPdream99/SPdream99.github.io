@@ -1,3 +1,7 @@
+:root {
+    --locate: 6%;
+}
+
 html,
 body {
     --bg-color: #222;
@@ -92,6 +96,14 @@ body {
     display: none;
 }
 
+#credit {
+    color: #fff;
+    right: 1%;
+    position: fixed;
+    top: 0;
+    font-size: 1vw;
+}
+
 @keyframes reveal {
     to {
         border-top: 0vw solid #F00;
@@ -105,7 +117,7 @@ body {
 
     100% {
         z-index: 1;
-        top: 6%;
+        top: var(--locate);
     }
 }
 
