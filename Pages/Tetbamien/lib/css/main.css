@@ -185,7 +185,7 @@ button:hover {
     height: 107vh;
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     scroll-snap-align: start;
 }
