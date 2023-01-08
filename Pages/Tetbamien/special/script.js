@@ -76,8 +76,8 @@ function createFirework(e) {
         f.ontransitionend = function () {
             var p = this.querySelectorAll('.particle')
             p.forEach(function (elm) {
-                var x = Math.random() < .2 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
-                var y = Math.random() < .2 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
+                var x = Math.random() < .7 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
+                var y = Math.random() < .5 ? Math.random() * fw_spread : (-1) * Math.random() * fw_spread
                 elm.style.left = x + 'px'
                 elm.style.top = y + 'px'
                 elm.style.opacity = '0'
