@@ -174,11 +174,6 @@ button:hover {
     position: relative;
     height: 100%;
     background-color: transparent;
-    scroll-behavior: auto;
-    scroll-snap-type: y proximity;
-    overflow-y: scroll;
-    scroll-snap-type: proximity;
-    scroll-snap-points-y: repeat(100vh);
 }
 
 .container {
@@ -187,7 +182,6 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    scroll-snap-align: start;
 }
 
 .container.north {
