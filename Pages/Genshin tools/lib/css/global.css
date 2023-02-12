@@ -1,0 +1,75 @@
+/* Scroll-bar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--out);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--in);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--in);
+}
+
+::-webkit-scrollbar-button {
+    background: var(--out);
+}
+
+/* Tag */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-image: url(./images/main-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div {
+    display: block;
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+h3 {
+    font-size: 1.3vw;
+}
+
+p {
+    font-size: 1vw;
+}
+
+button {
+    margin-top: 1%;
+    font-size: 2vw;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 2%;
+    padding: 1%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button:hover {
+    background-color: var(--btn-bg);
+    color: var(--btn-text-hover);
+}

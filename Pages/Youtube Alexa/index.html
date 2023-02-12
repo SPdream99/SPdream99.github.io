@@ -1,19 +1,20 @@
 <!doctype html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Music Post</title>
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Post</title>
 
-    </head>
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css">
 
-    <body>
-        <h1>Music Post</h1>
-        <div id="new">
+</head>
+
+<body>
+    <h1>Music Post</h1>
+    <div id="new">
         <p style="display:inline">Put your </p>
         <p style="display:inline"><a href="https://listenbox.app">listenbox</a></p>
         <p style="display:inline"> link here:</p>
@@ -21,32 +22,33 @@
         <label for="link">Link:</label>
         <input type="url" id="link" name="link"><br><br>
         <button id="buttonx">Send</button>
-	<div class="main">
-	<div class="boxx">
-        <a href="https://listenbox.app" id="imagea"><img src="https://pvm.com.vn/wp-content/uploads/2022/03/unnamed.png" alt="Current Image" id="imagex" ></a>
-	<h4 id="titlex" style="display:none;">List:</h4>
-	</div>
-        <nav>
-            <ul id="songlist" style="display:none;">
-            </ul>
-        </nav>
-	</div>
+        <div class="main">
+            <div class="boxx">
+                <a href="https://listenbox.app" id="imagea" style="text-decoration: none;">Link image<img
+                        src="https://pvm.com.vn/wp-content/uploads/2022/03/unnamed.png" alt="Current Image"
+                        id="imagex"></a>
+                <h4 id="titlex" style="display:none;">List:</h4>
+            </div>
+            <nav>
+                <ul id="songlist" style="display:none;">
+                </ul>
+            </nav>
         </div>
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        <script>
-            function run(){
-	        const queryString = window.location.search;
-	        const urlParams = new URLSearchParams(queryString);
-	        let templink=document.getElementById('link');
-	        console.log(urlParams.get('llink'));
-	        templink.value=urlParams.get('llink');
-            }
-            run();
-            if(document.getElementById('link').value!=""){
-                post();
-            }
-        </script>
-    </body>
+    </div>
+    <!-- Load external JavaScript -->
+    <script src="scripts.js"></script>
+    <script>
+        function run() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            let templink = document.getElementById('link');
+            templink.value = urlParams.get('llink');
+        }
+        run();
+        if (document.getElementById('link').value != "") {
+            post();
+        }
+    </script>
+</body>
 
 </html>

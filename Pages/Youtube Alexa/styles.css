@@ -1,18 +1,26 @@
-body{
+/* Set the default selection to none */
+body {
     user-select: none;
 }
+
+/* Center the heading and set a sans serif font type along with normal font weight */
 h1 {
     text-align: center;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: normal;
 }
+
+/* Center the div elements, set a sans serif font type and add some padding */
 div {
     text-align: center;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: normal;
     padding-top: 1%;
 }
-img,#imagea{
+
+/* Set the dimensions of the images and make them automatically resize with the width and height of the viewport */
+img,
+#imagea {
     width: auto;
     height: auto;
     max-width: 40vw;
@@ -22,20 +30,39 @@ img,#imagea{
     margin-right: auto;
     padding-top: 1%;
 }
-#titlex{padding-top: 1%;}
-nav ul{height:240px;margin-left: auto;margin-right: auto; text-align: left;width:50vw;}
-nav ul{overflow:hidden; overflow-y:scroll;}
-#songlist p{
-    max-width: 60vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  user-select: none;
+
+/* Add some padding to the titlex element */
+#titlex {
+    padding-top: 1%;
 }
-.hide{
+
+/* Set the height, margin and alignment of the navigation list elements */
+nav ul {
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 50vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* Set the maximum width of the song list paragraphs, limit the overflow of text and disable the user-select */
+#songlist p {
+    max-width: 60vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* Hide the hide element by default */
+.hide {
     display: none;
 }
-#songlist p:hover .hide{
+
+/* Show the hide element when hovering the selected song */
+#songlist p:hover .hide {
     display: block;
     max-width: 30vw;
     max-height: 30vh;
@@ -46,13 +73,17 @@ nav ul{overflow:hidden; overflow-y:scroll;}
     z-index: 1;
     filter: brightness(0.7);
 }
-#songlist p:hover{
-   font-weight: bold;
-   overflow: auto;
-  white-space: break-spaces;
+
+/* Increase the font weight on mouse hover and prevent from text overflow */
+#songlist p:hover {
+    font-weight: bold;
+    overflow: auto;
+    white-space: pre-wrap;
 }
-.main{
-display:flex;
-flex-direction:row;
-justify-content:space-around;
+
+/* Display Flex and set the content space around the main element */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
