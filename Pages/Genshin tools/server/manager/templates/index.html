@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowbite Flask</title>
-    <link rel="stylesheet"
-        href="{{ url_for('static',filename='dist/css/output.css') }}">
-</head>
-
-<body>
+{% extends 'base.html' %}
+{% block title %} Main {% endblock %}
+{% block content %}
     </br></br></br></br></br>
     <div align="center">
         <div align="center" class="border">
@@ -23,6 +13,4 @@
             <a href="{{ url_for('logout') }}" class="btn">Logout</a>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
-</body>
+{% endblock %}

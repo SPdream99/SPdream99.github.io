@@ -1,13 +1,7 @@
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <title> Register </title>
-  <link rel="stylesheet"
-    href="{{ url_for('static',filename='dist/css/output.css') }}">
-</head>
-
-<body></br></br></br></br></br>
+{% extends 'base.html' %}
+{% block title %} Register{% endblock %}
+{% block content %}
+</br></br></br></br></br>
   <div align="center">
     <div align="center" class="border">
       <div class="header">
@@ -28,8 +22,4 @@
           In here</a></p>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock %}
